@@ -1,0 +1,23 @@
+#端口
+server:
+  port: 8001
+
+#服务名
+spring:
+  application:
+    name: server_edu
+  #环境设置：dev、test、prod
+  profiles:
+    active: dev
+
+  #数据源配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/education?useSSL=false&serverTimezone=UTC&characterEncoding=utf8
+    username: root
+    password: 990307
+
+#mybatis日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
